@@ -1,9 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
-  <body></body>
+  <body>
+   <h1 style="display: inline">Tic-Tac-Toe</h1> 
+    <p>Usuario: <span id="usuario-simbolo"></span></p>
+    <p>Computadora: <span id="cpu-simbolo"></span></p>
+    
+      <div id="tablero">
+        <div class="casilla" onclick="realizarMovimiento(0)"></div>
+        <div class="casilla" onclick="realizarMovimiento(1)"></div>
+        <div class="casilla" onclick="realizarMovimiento(2)"></div>
+        <div class="casilla" onclick="realizarMovimiento(3)"></div>
+        <div class="casilla" onclick="realizarMovimiento(4)"></div>
+        <div class="casilla" onclick="realizarMovimiento(5)"></div>
+        <div class="casilla" onclick="realizarMovimiento(6)"></div>
+        <div class="casilla" onclick="realizarMovimiento(7)"></div>
+        <div class="casilla" onclick="realizarMovimiento(8)"></div>
+      </div>
+    
+    <p>
+      Turno: <span id="jugador-nombre"></span> <span
+        id="jugador-simbolo"
+      ></span>
+    </p>
+    <p id="mensaje"></p>
+    <button  class="reiniciarJuego" onclick="reiniciarJuego()">REINICIAR JUEGO</button></div>  
+
+    <script src="main.js"></script>
+  </body>
 </html>
