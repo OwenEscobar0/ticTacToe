@@ -5,11 +5,16 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-   <h1 style="display: inline">Tic-Tac-Toe</h1> 
+  <div class="container" > <h1 style="display: inline">Tic-Tac-Toe</h1> 
     <p>Usuario: <span id="usuario-simbolo"></span></p>
     <p>Computadora: <span id="cpu-simbolo"></span></p>
     
-      <div id="tablero">
+    <audio autoplay loop>
+      <source src="./audios/sinnesloschen-beam-117362.mp3" type="audio/ogg">
+      <source src="archivo-audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="tablero">
         <div class="casilla" onclick="realizarMovimiento(0)"></div>
         <div class="casilla" onclick="realizarMovimiento(1)"></div>
         <div class="casilla" onclick="realizarMovimiento(2)"></div>
@@ -22,12 +27,12 @@
       </div>
     
     <p>
-      Turno:: <span id="jugador-nombre"></span> <span
+      Turno: <span id="jugador-nombre"></span> <span
         id="jugador-simbolo"
       ></span>
     </p>
     <p id="mensaje"></p>
-    <button  class="reiniciarJuego" onclick="reiniciarJuego()">REINICIAR JUEGO</button></div>  
+    <button  class="reiniciarJuego" onclick="reiniciarJuego()">REINICIAR JUEGO</button></div>  </div>
 
     <script src="main.js"></script>
   </body>

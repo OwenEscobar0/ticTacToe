@@ -1,3 +1,137 @@
 body {
-    
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+
+  background-image: url(./imagenes/cat-4.webp);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  width: 100%;
+}
+h1 {
+  color: rgba(255, 8, 8, 0.997);
+  text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+    0 0 180px rgba(38, 104, 127, 1);
+  margin-left: 8%;
+  
+}
+p {
+  color: rgb(255, 255, 255);
+  margin-left: 8%;
+  text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+    0 0 180px rgba(38, 104, 127, 1);
+}
+
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+  width: 100px;
+  margin-bottom: 20px;
+  margin-left: 34%;
+}
+
+.casilla {
+  width: 80px;
+
+  height: 80px;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.223);
+  text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+    0 0 180px rgba(38, 104, 127, 1);
+}
+
+.X {
+  color: #f00;
+}
+
+.O {
+  color: #00f;
+}
+
+#mensaje {
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgba(255, 6, 6, 0.997);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  cursor: pointer;
+  margin-left: 9%;
+  color: rgb(255, 255, 255);
+  background-color: rgba(240, 248, 255, 0.425);
+  text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+    0 0 180px rgba(38, 104, 127, 1);
+}
+
+button:hover {
+  background-color: #555;
+}
+
+@media (min-width: 400px) {
+  body {
+    background-image: url(./imagenes/cat-4.webp);
+    background-repeat: initial;
+    height: 250px;
+  }
+  #tablero {
+   justify-content: center;
+   margin-left: 44%;
+  }
+  h1 {
+    justify-content: center;
+    margin-right: 10%;
+  }
+  p {
+    justify-content: center;
+    margin-right: 10%;
+  }
+  button {
+    justify-content: center;
+    margin-right: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  #tablero {
+    justify-content: center;
+    margin-left: 45%;
+  }
+  h1 {
+    justify-content: center;
+    margin-left: 8%;
+  }
+  p {
+    justify-content: center;
+    margin-left: 8%;
+  }
+  button {
+  justify-content: center;
+  margin-left: 8.5%;
+  }
 }
