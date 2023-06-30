@@ -1,9 +1,20 @@
 let tablero = ["", "", "", "", "", "", "", "", ""];
 let jugadorActual = {
   nombre: "Usuario",
-  simbolo: "X",
+  simbolo: "🐈‍⬛",
 };
 let juegoTerminado = false;
+let audio = document.createElement("AUDIO");
+document.body.appendChild(audio);
+audio.src = "audios/sinnesloschen-beam-117362.mp3";
+audio.loop = true;
+
+document.body.addEventListener("mousemove", function () {
+  audio.play();
+});
+document.body.addEventListener("touchmove", function () {
+  audio.play();
+});
 
 const combinacionesGanadoras = [
   [0, 1, 2],
@@ -26,7 +37,7 @@ casillas.forEach((casilla, indice) => {
   casilla.addEventListener("click", () => realizarMovimiento(indice));
 });
 
-function realizarMovimiento(indice) { 
+function realizarMovimiento(indice) {
   if (!juegoTerminado && tablero[indice] === "") {
     tablero[indice] = jugadorActual.simbolo;
     casillas[indice].textContent = jugadorActual.simbolo;
@@ -34,9 +45,9 @@ function realizarMovimiento(indice) {
     comprobarEstadoJuego();
     if (!juegoTerminado) {
       jugadorActual =
-        jugadorActual.simbolo === "X"
-          ? { nombre: "CPU", simbolo: "O" }
-          : { nombre: "Usuario", simbolo: "X" };
+        jugadorActual.simbolo === "🐈‍⬛"
+          ? { nombre: "CPU", simbolo: "🐭" }
+          : { nombre: "Usuario", simbolo: "🐈‍⬛" };
       if (jugadorActual.nombre === "CPU") {
         realizarMovimientoCPU();
       }
@@ -46,12 +57,12 @@ function realizarMovimiento(indice) {
   }
 }
 
-function realizarMovimientoCPU() { 
+function realizarMovimientoCPU() {
   let mejorPuntaje = -Infinity;
   let mejorMovimiento;
   for (let i = 0; i < tablero.length; i++) {
     if (tablero[i] === "") {
-      tablero[i] = "O";
+      tablero[i] = "🐭";
       let puntaje = minimax(tablero, 0, false);
       tablero[i] = "";
       if (puntaje > mejorPuntaje) {
@@ -61,11 +72,11 @@ function realizarMovimientoCPU() {
     }
   }
 
-  tablero[mejorMovimiento] = "O";
-  casillas[mejorMovimiento].textContent = "O";
-  casillas[mejorMovimiento].classList.add("O");
+  tablero[mejorMovimiento] = "🐭";
+  casillas[mejorMovimiento].textContent = "🐭";
+  casillas[mejorMovimiento].classList.add("🐭");
   comprobarEstadoJuego();
-  jugadorActual = { nombre: "Usuario", simbolo: "X" };
+  jugadorActual = { nombre: "Usuario", simbolo: "🐈‍⬛" };
   mostrarJugadorActual();
 }
 
@@ -73,7 +84,7 @@ function minimax(tablero, profundidad, esMaximizador) {
   let resultado = comprobarGanador();
 
   if (resultado !== null) {
-    return resultado === "X" ? -1 : 1;
+    return resultado === "🐈‍⬛" ? -1 : 1;
   } else if (tableroCompleto()) {
     return 0;
   }
@@ -83,7 +94,7 @@ function minimax(tablero, profundidad, esMaximizador) {
 
     for (let i = 0; i < tablero.length; i++) {
       if (tablero[i] === "") {
-        tablero[i] = "O";
+        tablero[i] = "🐭";
         let puntaje = minimax(tablero, profundidad + 1, false);
         tablero[i] = "";
         mejorPuntaje = Math.max(puntaje, mejorPuntaje);
@@ -96,7 +107,7 @@ function minimax(tablero, profundidad, esMaximizador) {
 
     for (let i = 0; i < tablero.length; i++) {
       if (tablero[i] === "") {
-        tablero[i] = "X";
+        tablero[i] = "🐈‍⬛";
         let puntaje = minimax(tablero, profundidad + 1, true);
         tablero[i] = "";
         mejorPuntaje = Math.min(puntaje, mejorPuntaje);
@@ -139,12 +150,12 @@ function comprobarEstadoJuego() {
 
 function reiniciarJuego() {
   tablero = ["", "", "", "", "", "", "", "", ""];
-  jugadorActual = { nombre: "Usuario", simbolo: "X" };
+  jugadorActual = { nombre: "Usuario", simbolo: "🐈‍⬛" };
   juegoTerminado = false;
 
   casillas.forEach((casilla) => {
     casilla.textContent = "";
-    casilla.classList.remove("X", "O");
+    casilla.classList.remove("🐈‍⬛", "🐭");
   });
 
   mensaje.textContent = "";
@@ -156,5 +167,5 @@ function mostrarJugadorActual() {
   jugadorSimbolo.textContent = jugadorActual.simbolo;
 }
 
-usuarioSimbolo.textContent = "X";
-cpuSimbolo.textContent = "O";
+usuarioSimbolo.textContent = "🐈‍⬛";
+cpuSimbolo.textContent = "🐭";

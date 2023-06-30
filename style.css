@@ -1,137 +1,139 @@
-body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  text-align: center;
-
-  background-image: url(./imagenes/cat-4.webp);
-
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.container {
-  width: 100%;
-}
-h1 {
-  color: rgba(255, 8, 8, 0.997);
-  text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
-    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
-    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
-    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
-    0 0 180px rgba(38, 104, 127, 1);
-  margin-left: 8%;
-  
-}
-p {
-  color: rgb(255, 255, 255);
-  margin-left: 8%;
-  text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
-    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
-    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
-    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
-    0 0 180px rgba(38, 104, 127, 1);
-}
-
-#tablero {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0px;
-  width: 100px;
-  margin-bottom: 20px;
-  margin-left: 34%;
-}
-
-.casilla {
-  width: 80px;
-
-  height: 80px;
-  border: 1px solid #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 36px;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.223);
-  text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
-    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
-    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
-    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
-    0 0 180px rgba(38, 104, 127, 1);
-}
-
-.X {
-  color: #f00;
-}
-
-.O {
-  color: #00f;
-}
-
-#mensaje {
-  margin-top: 20px;
-  font-weight: bold;
-  color: rgba(255, 6, 6, 0.997);
-}
-
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  cursor: pointer;
-  margin-left: 9%;
-  color: rgb(255, 255, 255);
-  background-color: rgba(240, 248, 255, 0.425);
-  text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
-    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
-    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
-    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
-    0 0 180px rgba(38, 104, 127, 1);
-}
-
-button:hover {
-  background-color: #555;
-}
-
-@media (min-width: 400px) {
+@media (min-width: 599px) {
   body {
-    background-image: url(./imagenes/cat-4.webp);
-    background-repeat: initial;
-    height: 250px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    text-align: center;
+
+    background-image: url(./imagenes/felix-q.jpg);
+
+    background-size: 100%;
   }
-  #tablero {
-   justify-content: center;
-   margin-left: 44%;
+  .container {
+    width: 100%;
+
+    margin-top: 175px;
   }
   h1 {
-    justify-content: center;
-    margin-right: 10%;
+    color: rgba(255, 8, 8, 0.997);
+    text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+      0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+      0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+      0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+      0 0 180px rgba(38, 104, 127, 1);
+    margin-left: 0%;
+    font-size: 70px;
   }
   p {
-    justify-content: center;
-    margin-right: 10%;
+    color: rgb(255, 255, 255);
+    margin-left: 0%;
+    text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+      0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+      0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+      0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+      0 0 180px rgba(38, 104, 127, 1);
+    font-size: 55px;
   }
-  button {
+
+  #tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    width: 100px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+  }
+
+  .casilla {
+    width: 180px;
+
+    height: 180px;
+    border: 1px solid #333;
+    display: flex;
     justify-content: center;
-    margin-right: 10%;
+    align-items: center;
+    font-size: 100px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.223);
+    text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+      0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+      0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+      0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+      0 0 180px rgba(38, 104, 127, 1);
+  }
+
+  .X {
+    color: #f00;
+  }
+
+  .O {
+    color: #00f;
+  }
+
+  #mensaje {
+    margin-top: 20px;
+    font-weight: bold;
+    color: rgba(255, 6, 6, 0.997);
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 400px;
+    height: 100px;
+    font-size: 40px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    cursor: pointer;
+    margin-left: -2%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(240, 248, 255, 0.425);
+    text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+      0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+      0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+      0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+      0 0 180px rgba(38, 104, 127, 1);
+  }
+
+  button:hover {
+    background-color: #555;
   }
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url(./imagenes/cat-4.webp);
+    background-size: 1280px;
+  }
+  .container {
+    margin-top: 20px;
+  }
+  .casilla {
+    height: 80px;
+    width: 80px;
+    font-size: 45px;
+  }
   #tablero {
     justify-content: center;
     margin-left: 45%;
   }
   h1 {
     justify-content: center;
-    margin-left: 8%;
+    margin-left: -2%;
+    font-size: 35px;
   }
   p {
     justify-content: center;
-    margin-left: 8%;
+    margin-left: -2%;
+    font-size: 20px;
   }
   button {
-  justify-content: center;
-  margin-left: 8.5%;
+    justify-content: center;
+    margin-left: -2.7%;
+    width: 180px;
+    height: 50px;
+    font-size: 15px;
+    margin-top: 0%;
   }
 }
+
